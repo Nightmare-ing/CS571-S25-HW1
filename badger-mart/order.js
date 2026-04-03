@@ -59,7 +59,15 @@ function roundMoney(num) {
 }
 
 function calculateSubtotal() {
-    return 0.0; // TODO calculateSubtotal
+    let res = 0;
+    for (item of ITEMS) {
+        let price = parseFloat(
+            document.getElementById(`${item}-price`).innerText,
+        );
+        let qty = parseInt(document.getElementById(`${item}-quantity`).value);
+        res += price * qty;
+    }
+    return res;
 }
 
 function calculateSalesTax() {
