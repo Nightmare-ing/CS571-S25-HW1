@@ -71,7 +71,8 @@ function calculateSubtotal() {
 }
 
 function calculateSalesTax() {
-    return 0.0; // TODO calculateSalesTax
+    const state = document.getElementById("state-tax").value;
+    return roundMoney(getSalesTaxRateForState(state) * calculateSubtotal());
 }
 
 function getSalesTaxRateForState(state) {
