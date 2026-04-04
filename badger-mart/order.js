@@ -101,3 +101,6 @@ document.getElementById("btn-sales-tax").addEventListener("click", () => {
 });
 
 // TODO Add an event listener to btn-checkout
+document.getElementById("btn-checkout").addEventListener("click", () => {
+    alert(`Yout total is $${calculateSubtotal() + calculateSalesTax()}`);
+});
